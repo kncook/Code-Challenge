@@ -1,0 +1,73 @@
+<!-- author: Katherine Hoff
+Date: 9/14/2022 
+Purpose: Student Software Developer Position Code Challange
+Description: Using Javascript/HTML/CSS, create a web page that mirrors the functionality 
+of a prototype. This prototype represents a FAQ page with 3 questions, each containing a
+dropdown option with the answer
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <!-- link to my css style sheet -->
+     <link rel="stylesheet" href="assets/css/app.css">
+     <!-- <link rel="images" href="assets/img1.jpg"> -->
+     <title>Code Challenge</title>
+</head>
+<!-- inline styling to make a background color -->
+<body style="background-color:rgb(247, 247, 236)">
+
+
+
+ <!-- This title is using heading 1 to make it an appropriate size followed by a horizontal line and break-->
+<h1>FAQ's</h1>
+<hr></hr>
+<br>
+   
+<!-- each textbox is made into a button, where when you click it user sees the answer to the FAQ as a drop down -->
+<button type="button" class="collapsible">Why did the programmer quit his job?</button>
+<div class="content">
+    <p>He didn't get arrays.</p>
+</div>
+
+
+<!-- FAQ Question 2 -->
+<button type="button" class="collapsible">How many programmers does it take to change a light bulb?</button>
+<div class="content">
+    <p>None, that's a hardware problem.</p>
+</div>
+
+<!-- FAQ Question 3 -->
+<button type="button" class="collapsible">0 is false 1 is true, right?</button>
+<div class="content">
+    <p>1</p>
+</div>
+
+    <!-- This is the javascript part that allows each row to expand and collapse -->
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+// initialize variable
+var i;
+// for statement for toggle and clicking on a FAQ
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    // if sttaement allows us to display answer only when clicked on. Otherwise it is "blocked"
+    if (content.style.display === "block") {
+        content.style.display = "none";
+    } 
+    else {
+        content.style.display = "block";
+        }
+    });
+}
+</script>
+
+
+</body>
+</html>

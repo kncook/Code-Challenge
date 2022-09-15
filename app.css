@@ -1,0 +1,75 @@
+/* css page that allows for styling of website*/
+
+/* Style of the button that is used to open and close the collapsible content */
+.collapsible {
+    /* background and text color */
+    background-color: #eee;
+    color: #444;
+    /* change in the cursor */
+    cursor: pointer;
+    /* alignement size and spacing */
+    padding: 18px;
+    text-align: left;
+    font-size: 15px;
+    /* border styling */
+    border-color: #1a3246;
+    border-style: solid;
+    border-width: 1px;
+    /* create gap between different boxes of questions */
+    margin-bottom: 10px;
+    /* centers to page no matter how big or small screen is */
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+  }
+  
+  /* background color to the color as you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: rgb(202, 234, 241);
+  }
+  
+  /* content showed when clicked on. Note: styling similar to .collapsible*/
+  .content {
+    padding:0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #99c3e5;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-color:#1a3246;
+    border-style: solid;
+    border-top: none;
+    margin-bottom: 10px;
+    border-width: 1px;
+    /* brings it back towards the top of the question textbox */
+    margin-top: -10px;
+  }
+
+    /* the plus sign */
+  .collapsible:after {
+    /* Unicode character for "plus" sign (+) */
+    content: '\02795';
+    /* size of plus sign */
+    font-size: 10px;
+    /* stays on the right side but not completely against border */
+    float: right;
+    margin-left: 5px;
+  }
+  /* the minus sign */
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    font-size: 10px;
+  }
+
+  /* FAQ's heading to center it and change color */
+  h1 {
+    color: #1a3246;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  /* centering horizontal line */
+  hr {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
